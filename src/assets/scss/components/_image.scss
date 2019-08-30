@@ -26,6 +26,11 @@
 			top: 0;
 			width: 100%;
 		}
+		
+		.intro-img {
+			height: 18em;
+			object-fit: contain;	
+		}
 
 		img {
 			border-radius: _size(border-radius);

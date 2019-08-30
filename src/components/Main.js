@@ -1,7 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import pic01 from '../images/pic01.jpg'
+import golfPic from '../images/golfpic.jpg';
+import bigTen from '../images/bigTenTeam.jpg';
+import cactusTour from '../images/cactusTour.png';
+import mind8full from '../images/mind8full.png';
+import winePost from '../images/winepost.png';
+import hexaSays from '../images/hexasays.png';
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 
@@ -15,17 +20,38 @@ class Main extends React.Component {
 
         <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Intro</h2>
-          <span className="image main"><img src={pic01} alt="" /></span>
-          <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+          <p>Hello and Welcome to my portfolio!</p> 
+          <p>My name is Kaitlin and I am professional golfer turned software developer.</p>
+          <span className="image main"><img className="intro-img" src={golfPic} alt="" /></span>
+          {/* <p>I was born and raised in Orange County, California, and because I loved the OC so much I decided to go to college in Chicago, Illinois, winter wonderland *cough* (polar vortex). But in all honesty, I loved Northwestern and the city of Chicago. During college, I grew academically, athletically, and personally. Most importantly, I had the opportunity to play golf with the best teammates ever and even make Northwestern Athletics history.</p>
+          <span className="image main"><img src={bigTen} alt="" /></span>
+          <p>If only I studied computer science... I had always been interested in computer science and software development, but I always had this fear that I wasn't intelligent enough. In addition, I was determined to play golf professionally. </p>
+          <p>After graduating, I earned my Symetra Tour card, a developmental tour of the LPGA, and competed across the United States for a year. Unfortunately for a number of reasons, I decided to quit playing competitively. It was the most difficult decision I have ever made. I played golf for 12 years and for 10 years I aspired to play professionally. I really loved the game and trained as hard as I could. At the time, it truly felt as if I had been running down one career path and suddenly hit a dead end. </p> */}
+
           {close}
         </article>
 
         <article id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Work</h2>
-          <span className="image main"><img src={pic02} alt="" /></span>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+          <h2 className="major">Portfolio</h2>
+          <h3>mind8full</h3>
+          <span className="image main"><img src={mind8full} alt="" /></span>
+          <p>mind8full is an application that hopes to provide a space for personal meditation. We want our visitors to take care of their mental health in the method they see fit. As you may know meditation takes many forms, at mind8full we do it in the form of snacks: gummy bears, cough drops, and some munchies.</p>
+          <strong>Technologies Used:</strong><p>HTML5 | CSS3 | JSX | React | styled-components | Node.js | Express | MongoDB | Mongoose | Git | GitHub | ChromeDevTools | Postman | Sketch</p>
+
+          <h3>The Cactus Tour</h3>
+          <span className="image main"><img src={cactusTour} alt="" /></span>
+          <p>I decided to recreate a web application I used during my golf career, The Cactus Tour <a className="tour-link" href="http://thecactustour.com">website</a>. The Cactus Tour is a women's professional golf tour that is geared toward players striving to get their LPGA card, which is one of the largest and most competitive women's golf tour in the world. I worked with the tour director and challenged myself to implement features and functionalities he wanted to see in the redesign.</p>
+          <strong>Technologies Used:</strong><p>HTML5 | CSS3 | JSX | React | styled-components | Node.js | Express | MongoDB | Mongoose | Git | GitHub | ChromeDevTools | Postman | Sketch</p>
+
+          <h3>WinePost</h3>
+          <span className="image main"><img src={winePost} alt="" /></span>
+          <p>Wine Post is a social media app for wine enthusiasts by wine enthusiasts, Ralphie, my partner for this project and myself! Users (over 21 please) can create an account to connect with fellow wine enthusiasts around the world. Users can share their reviews of and experiences with wine.</p>
+          <strong>Technologies Used:</strong><p>HTML5 | CSS3 | JSX | React | styled-components | Python | Flask | PostgreSQL | SQLite | Mongoose | Git | GitHub | ChromeDevTools | Postman | Sketch</p>
+
+          <h3>Hexa-Says</h3>
+          <span className="image main"><img src={hexaSays} alt="" /></span>
+          <p>Hexa-Says is a unique version of the classic game, Simon Says. The rules to Simon Says are simple: a sequence will be played and the user will need to play the exact same sequence in order to move on. My goal with this project was to take a classic game and make it a bit more fun, challenging, but also asthetically pleasing.</p>
+          <strong>Technologies Used:</strong><p>HTML5 | CSS3 | Node.js | Express | EJS | MongoDB | Mongoose | Git | GitHub | Heroku</p>
           {close}
         </article>
 
